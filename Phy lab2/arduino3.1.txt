@@ -1,0 +1,22 @@
+int ledpin = 2;
+int button = 3;
+int buttonState = 0;
+int ledState = LOW;    
+int lastButtonState; 
+ 
+void setup()
+{
+  pinMode(ledpin, OUTPUT);
+  pinMode(button, INPUT);
+  buttonState = digitalRead(button);
+}
+ 
+void loop()
+{
+  lastButtonState    = buttonState;
+  buttonState = digitalRead(button);
+  if(lastButtonState == HIGH && buttonState == LOW) {
+    ledState = !ledState;
+    digitalWrite(ledpin, ledState);
+  }
+}

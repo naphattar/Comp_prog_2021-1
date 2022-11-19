@@ -1,0 +1,12 @@
+a =input()
+b =input()
+a = a[1:-1]
+b = b[1:-1]
+a =a.split(",")
+b =b.split(",")
+x,y,z = float(a[0]),float(a[1]),float(a[2])
+m,n,k = float(b[0]),float(b[1]),float(b[2])
+a =[x,y,z]
+b =[m,n,k]
+c =[x+m,n+y,k+z]
+print(a,"+",b,"=",c)

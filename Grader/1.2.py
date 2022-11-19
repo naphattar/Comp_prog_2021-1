@@ -1,0 +1,10 @@
+import math
+a = int(input())
+b = int(input())
+c = int(input())
+y = math.sqrt(b**2-4*a*c)
+p = ((-1)*(b)-y)/(2*a)
+q = ((-1)*(b)+y)/(2*a)
+p = round(p,3)
+q = round(q,3)
+print(p,q)
